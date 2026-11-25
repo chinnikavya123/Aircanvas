@@ -32,7 +32,7 @@ Whether you want to sketch something creative, experiment with colours, or explo
 - Real-time hand tracking through your webcam.
 - Smooth drawing experience.
 
-🌈 **80+ Vibrant Colours**
+🌈 **24+ Vibrant Colours**
 - Explore a wide collection of colours.
 - Open the expandable colour palette whenever needed.
 - Choose your favourite colours.
