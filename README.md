@@ -66,6 +66,170 @@ Whether you want to sketch something creative, experiment with colours, or explo
 - Dedicated gesture guide.
 - Live webcam preview and drawing feedback.
 
+## 🚀 Getting Started – Installation & Setup Guide
+
+There are two ways to use AirCanvas: download the ready-to-run Windows application or set up the source code and run it using Python.
+
+### 🖥️ Option 1: Download and Run the Windows Application (Recommended)
+
+You can use AirCanvas without installing Python or any development tools.
+
+1. Visit the [AirCanvas GitHub Releases](https://github.com/chinnikavya123/Aircanvas/releases/latest) page.
+2. Download **AirCanvas-Windows.zip**.
+3. Extract the downloaded ZIP file.
+4. Open the extracted `AirCanvas` folder.
+5. Double-click `AirCanvas.exe`.
+6. Allow webcam access if prompted.
+
+🎉 That's it! AirCanvas is ready to use.
+
+**Note:** Keep the extracted folder structure intact. Do not move `AirCanvas.exe` away from its supporting files.
+
+---
+
+### 💻 Option 2: Run AirCanvas Using VS Code
+
+If you want to explore the source code, modify the application, or run it through VS Code, follow these steps.
+
+#### Step 1: Download the Source Code
+
+1. Visit the [AirCanvas GitHub Repository](https://github.com/chinnikavya123/Aircanvas).
+2. Click the green **Code** button.
+3. Select **Download ZIP**.
+4. Extract the downloaded ZIP file to your preferred location.
+5. Open the extracted `AirCanvas` folder in Visual Studio Code.
+
+You can also open the folder from PowerShell:
+
+```powershell
+cd "C:\path\to\AirCanvas"
+code .
+```
+
+Replace the path with the actual location of your extracted folder.
+
+#### Step 2: Check the Required Installations
+
+Before running any installation commands, verify whether the required software is already installed.
+
+Open the VS Code terminal using `Ctrl + `` and execute:
+
+**1. Check Python**
+
+```powershell
+python --version
+```
+
+AirCanvas is tested with Python 3.12. Make sure you have Python 3.12.x installed.
+
+If the command is not recognized, install Python from [python.org](https://www.python.org/downloads/).
+
+During installation, enable **Add Python to PATH**.
+
+**2. Check pip**
+
+```powershell
+python -m pip --version
+```
+
+If pip is unavailable, run:
+
+```powershell
+python -m ensurepip --upgrade
+```
+
+**3. Check Visual Studio Code**
+
+Make sure VS Code is installed. You can download it from [Visual Studio Code](https://code.visualstudio.com/).
+
+**4. Check Git (Optional)**
+
+```powershell
+git --version
+```
+
+Git is optional when downloading the source code using the ZIP method.
+
+#### Step 3: Create a Virtual Environment
+
+Once Python is installed, navigate to the project directory in the VS Code terminal.
+
+Create a virtual environment:
+
+```powershell
+python -m venv .venv
+```
+
+Activate it:
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+If PowerShell blocks script execution, run:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+
+Then activate the environment again:
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+#### Step 4: Install the Required Dependencies
+
+First, upgrade pip:
+
+```powershell
+python -m pip install --upgrade pip
+```
+
+Install all the project dependencies:
+
+```powershell
+python -m pip install -r requirements.txt
+```
+
+This installs the libraries required by AirCanvas, including:
+
+- OpenCV – Image and video processing
+- MediaPipe – Hand tracking and gesture recognition
+- NumPy – Drawing and array operations
+- CustomTkinter – Desktop user interface
+- Pillow – Image processing and export
+
+Wait until the installation is complete.
+
+#### Step 5: Run AirCanvas
+
+Start the application using:
+
+```powershell
+python app.py
+```
+
+Allow access to your webcam when prompted.
+
+🖐️ Position your hand in front of the camera and start drawing in the air!
+
+---
+
+### ⚠️ Troubleshooting
+
+| Problem | Solution |
+|---|---|
+| Python is not recognized | Install Python and enable Add Python to PATH |
+| pip is not recognized | Run `python -m ensurepip --upgrade` |
+| Module not found | Activate `.venv` and reinstall dependencies |
+| Camera is not opening | Check webcam permissions and close other applications using the camera |
+| PowerShell blocks activation | Use the execution policy command provided above |
+
+**Recommended Environment:** Windows 10/11, Python 3.12.x, a working webcam, and an internet connection for installing dependencies.
+
+---
+
 ## 🖐️ Gesture Controls
 
 AirCanvas uses hand gestures to interact with the drawing canvas.
