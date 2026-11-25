@@ -732,11 +732,12 @@ class AirCanvas:
     # GESTURE GUIDE
     # --------------------------------------------------
 
+ 
     def show_gesture_guide(self):
 
         window = ctk.CTkToplevel(self.root)
         window.title("AirCanvas | Gesture Guide")
-        window.geometry("520x540")
+        window.geometry("520x620")
         window.resizable(False, False)
         window.configure(fg_color="#111A2E")
         window.transient(self.root)
@@ -829,21 +830,28 @@ class AirCanvas:
             text="Tip: Keep your hand clearly visible inside the camera frame.",
             font=("Segoe UI", 10),
             text_color="#A78BFA"
-        ).pack(pady=10)
+        ).pack(pady=(12, 5))
 
-        # Larger and more visible Got it button
+        # Prominent Got it button
         ctk.CTkButton(
             window,
             text="Got it  ✓",
-            width=210,
-            height=48,
-            font=("Segoe UI", 15, "bold"),
-            corner_radius=12,
+            width=300,
+            height=60,
+            font=("Segoe UI", 19, "bold"),
+            corner_radius=15,
             command=window.destroy,
-            fg_color="#6D4AFF",
-            hover_color="#805FFF",
-            text_color="#FFFFFF"
-        ).pack(pady=(8, 20))
+            fg_color="#7655FF",
+            hover_color="#9278FF",
+            text_color="#FFFFFF",
+            border_width=2,
+            border_color="#A997FF"
+        ).pack(
+            fill="x",
+            padx=35,
+            pady=(10, 20)
+        )
+
 
     # --------------------------------------------------
     # SHORTCUTS
